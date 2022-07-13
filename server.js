@@ -4,9 +4,7 @@ const path = require('path');
 //뭐지
 
 const server = jsonServer.create();
-const router = jsonServer.router(
-  path.resolve(__dirname + './build/movies.json')
-);
+const router = jsonServer.router(path.resolve(__dirname + '/movies.json'));
 const middlewares = jsonServer.defaults({
   static: path.resolve(__dirname + '/build/'),
 });
