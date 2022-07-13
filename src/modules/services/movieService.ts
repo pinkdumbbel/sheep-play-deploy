@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const movieService = axios.create({
   //baseURL: 'http://localhost:8000/movies',
-  baseURL: `https://sheepplay.herokuapp.com:8000/movies`,
+  baseURL: `https://sheepplay.herokuapp.com/movies`,
 });
 
 export const movieRequest = new HttpRequest(movieService);
