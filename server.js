@@ -2,7 +2,7 @@ const jsonServer = require('json-server');
 const path = require('path');
 
 const server = jsonServer.create();
-const router = jsonServer.router('./movies.json');
+const router = jsonServer.router('./movie.json');
 const middlewares = jsonServer.defaults({
   static: './dist',
 });
