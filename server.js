@@ -1,8 +1,6 @@
 const jsonServer = require('json-server');
 const path = require('path');
 
-//뭐지
-
 const server = jsonServer.create();
 const router = jsonServer.router('/movies.json');
 const middlewares = jsonServer.defaults({
