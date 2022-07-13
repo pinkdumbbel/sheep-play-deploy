@@ -1,10 +1,14 @@
 const jsonServer = require('json-server');
+const path = require('path');
+
 //뭐지
 
 const server = jsonServer.create();
-const router = jsonServer.router('./movie.json');
+const router = jsonServer.router(
+  path.resolve(__dirname + '/build/movies.json')
+);
 const middlewares = jsonServer.defaults({
-  static: './build',
+  static: path.resolve(__dirname + '/build/'),
 });
 
 const port = process.env.PORT || 8000;
