@@ -5,7 +5,7 @@ const path = require('path');
 
 const server = jsonServer.create();
 const router = jsonServer.router(
-  path.resolve(__dirname + '/build/movies.json')
+  path.resolve(__dirname + './build/movies.json')
 );
 const middlewares = jsonServer.defaults({
   static: path.resolve(__dirname + '/build/'),
