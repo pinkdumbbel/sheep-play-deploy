@@ -1,16 +1,13 @@
 const jsonServer = require('json-server');
-const path = require('path');
 
 const server = jsonServer.create();
-const router = jsonServer.router(
-  path.resolve(__dirname + '/../build/database/movies.json')
-);
+const router = jsonServer.router('./assets/database/movie.json');
 const middlewares = jsonServer.defaults({
-  static: path.resolve(__dirname + '/../build/'),
+  static: '../build',
 });
 
-console.log(process.env.PORT);
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 8000;
+console.log('port-deploy:', process.env.PORT);
 
 server.use(middlewares);
 
